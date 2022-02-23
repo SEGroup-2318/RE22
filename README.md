@@ -6,12 +6,10 @@ This repository contains the replication package for RE'22 paper.
 
 **Data_multilabel.csv**: This file is the result of our manual annotation which then fed into our multi-label classification algorithm.
 
-**Script.py**: This file contains the main Python methods we implemented in order to pre-process and classify the extracted policy statements into NFRs.
-
- An example of using a *numbered list*
- 
-  1. Cat
-  2. Dog
-     1. Golden Retriever
-  3. Llama
- 
+**Script.py**: This file contains the main Python methods we implemented in order to pre-process and classify the extracted policy statements into NFRs. Here is the content of this file:
+1. loading the data file (*Data_multilabel.csv*) 
+2. loading the embedding model (we used the pre-trained model of GloVe)
+3. Pre-processing the text by removing non-ascii tokens, stopwords, and lemmatization
+4. Vectorizing each policy statement using the embedding model
+5. Classifying statements and report the results. We used multiple classifers and report the best results in the paper (SVM).
+6. Classifiying the statements using VSM and report the results.
